@@ -1,22 +1,22 @@
 import React from 'react';
 import logo from '../../assets/logo.svg'
 import Order from '../Order/Order';
+import Overview from '../Overview/Overview';
 const Header = ({ children }) => {
 
     return (
         <div>
             <div class="drawer">
                 <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col">
+                <div class="drawer-content flex flex-col relative">
                     {/* <!-- Navbar --> */}
                     <div class="w-full navbar bg-base-100 border-solid border-b-[0.5px]  border-[#654a9b] ">
-                        <div class="flex-none lg:hidden">
-                            <label for="my-drawer-3" class="btn btn-square btn-ghost">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                            </label>
-                        </div>
+                        
                         <div class="flex-1 px-2 mx-2">
                             <img src={logo} alt="logoImage" />
+                            <div className='ml-5 lg:block hidden'>
+                                <Overview/>
+                            </div>
                         </div>
                         <div class="flex-none hidden lg:block">
                             {/* <ul class="menu menu-horizontal">
@@ -26,6 +26,11 @@ const Header = ({ children }) => {
                             </ul> */}
                             <div>
                                 <Order/>
+                            </div>
+                        </div>
+                        <div class="flex-none lg:hidden">
+                            <div>
+                                <Overview/>
                             </div>
                         </div>
                     </div>
