@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import video from '../../../assets/video-5.mp4'
+import video from '../../assets/video-5.mp4'
 const Conquere = () => {
 
     const videoRef=useRef(null)
@@ -17,11 +17,6 @@ const Conquere = () => {
                             Noze tracks the airborne markers (VOCs) associated with the Coronavirus family. Our AI uses that information to deliver a real-time risk index that will not only tell you if your space is prone to spreading the virus, but whether there’s a chance the virus is actually in the air.</p>
                     </div>
                     <div>
-                        {/*  <video src="https://getnoze.com/wp-content/themes/twentytwentyone/noze/assets/movies/NOZEabout1.mp4" autoPlay loop muted='muted' playsInline controlsList='nodownload'></video> */}
-                        {/*  <video width="320" height="240" autoplay>
-                            <source src={video}/>
-                            Your browser does not support the video tag.
-                        </video> */}
                        <video ref={videoRef} class="lg:w-[454px]" src={video} autoplay loop muted="muted" playsinline="" controlslist="nodownload" ></video>
                     </div>
                 </div>
